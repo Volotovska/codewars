@@ -1,0 +1,40 @@
+﻿<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+    function tripledouble(num1, num2){
+
+    var arr1 = num1.toString().split('') ;
+    console.log(arr1);
+    var arr2 = num2.toString().split('') ;
+    console.log(arr2);
+    for(var i = 0; i < arr1.length; i++){
+        if(arr1[i] == arr1[i+1] && arr1[i+1]== arr1[i+2] ){
+            var a = arr1[i];
+            var emptyArray = [];
+            emptyArray.push(a);
+            console.log(emptyArray);
+            for(var j = 0; j < arr2.length; j++){
+                if(emptyArray[0] == arr2[j] && emptyArray[0] == arr2[j+1]){
+                    console.log(1);
+                    return 1;
+                    }
+                };
+            }
+        }
+        return 0;
+    }
+
+    tripledouble(451999277, 41177722899);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

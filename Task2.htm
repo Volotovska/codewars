@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+    <title>Обьекты</title>
+
+</head>
+<body>
+
+    <input type="text">
+    </input>
+
+    <button type="submit" name="submit" style="width: 120px; height: 20px;"">submit
+    </button>
+
+    <div id="root">
+    </div>
+
+    <div style="margin: 20px">Result
+    </div>
+    <div id="result">
+    </div>
+
+      <script type="text/javascript">
+        var stars = ['Elijah Wood', 'Ian McKellen', 'Orlando Bloom','Ewan McGregor',' Liam Neeson', 'Natalie Portman', 'Ewan McGregor', 'Billy Bob Thornton', 'Martin Freeman']
+
+        var rootEl = document.getElementById('root');
+
+        for(var i = 0; i<stars.length; i++){
+            var div = document.createElement('div');
+            div.innerHTML = stars[i];
+            rootEl.appendChild(div);
+        }
+
+        var input = document.querySelector('input');
+
+        var button = document.querySelector('button');
+
+        var result = document.getElementById('result');
+       
+        button.addEventListener('click', function(){
+            var resultValue = stars.filter(function(item){
+                var searchValue = item.toLowerCase();
+                return searchValue.indexOf(input.value) != -1;
+            })
+
+        result.innerHTML = resultValue;
+        });
+
+    </script>
+
+</body>
+</html>

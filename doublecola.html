@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+        // function whoIsNext(numbers,r){
+
+        //     if(r<numbers.length){
+        //         console.log(numbers[r]);
+        //         return numbers[r];
+        //     }
+        //     else
+        //     var arg = Math.floor(r / numbers.length);
+        //     var res = r - arg*numbers.length;
+        //     console.log(numbers[res]);
+        //     return numbers[res];
+        // }
+
+        // function whoIsNext(names, r){
+        //     var emptyArray = [];
+        //     for(var n = 1; n  <  r; n++){
+        //         for(var i =0; i < names.length; i++){
+        //             emptyArray.push(names[i]);
+        //         }
+        //     }
+        //     console.log(emptyArray[r]);
+        //     return emptyArray[r];
+        // }
+
+        // whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 1);
+
+        function whoIsNext(names, r){
+            var emptyArray = [];
+            for(var i = 0; i < r; i++){
+                console.log(names[i]);
+                emptyArray.push(names[i]);
+                console.log(names[i]);
+                emptyArray.pop(names[i]);
+            }
+        }
+
+        whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"],  12);
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

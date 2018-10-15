@@ -31,15 +31,26 @@
         // whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 1);
 
         function whoIsNext(names, r){
-            var emptyArray = [];
-            for(var i = 0; i < r; i++){
-                console.log(names[i]);
-                emptyArray.push(names[i]);
-                console.log(names[i]);
-                emptyArray.pop(names[i]);
-            }
-        }
-
+  if(r<=names.length){
+     console.log(names[r-1]);
+     return names[r-1];
+  }
+    else {
+       var emptyArray = [];
+       for(var j = 0; j <names.length; j++){
+          emptyArray.push(names[j]);
+          }
+       for(var i = 1; i <= r; i++){
+          var name = emptyArray[0];
+          if(i === r) {
+            console.log(name);
+            return name;          
+          }
+          emptyArray.push(name, name);
+          emptyArray.shift();
+       }
+    }
+}
         whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"],  12);
     </script>
 

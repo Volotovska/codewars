@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+    function nbYear(p0, percent, aug, p) {
+          var popEndY = p0;
+          var counter = 0;
+
+        while(popEndY  < p){
+          popEndY += popEndY*percent/100+aug;
+          counter ++;
+        }
+        console.log(counter);
+        return counter;
+    }
+
+    nbYear(1500000, 2.5, 10000, 2000000);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

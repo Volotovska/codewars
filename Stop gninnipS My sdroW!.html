@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+    function spinWords(words){
+      var array = words.split(" ");
+      var result = [];
+      for(var i = 0; i< array.length; i++){
+        if(array[i].length < 5){
+          result.push(array[i]);
+        }
+        else {
+          var rev = Array.from(array[i]).reverse().join('');
+          result.push(rev);
+        }
+      }
+      var final = result.join(' ');
+      console.log(final);
+     return final;
+    }
+
+    spinWords("Hey fellow warriors");
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

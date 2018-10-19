@@ -4,29 +4,24 @@
 
     <script type="text/javascript">
 
-     function divisors(integer) {
-      function compareNumeric(a, b) {
-        if (a > b) return 1;
-        if (a < b) return -1;
+    function spinWords(words){
+      var array = words.split(" ");
+      var result = [];
+      for(var i = 0; i< array.length; i++){
+        if(array[i].length < 5){
+          result.push(array[i]);
+        }
+        else {
+          var rev = Array.from(array[i]).reverse().join('');
+          result.push(rev);
+        }
       }
-      var array = [];
-      for(var i = 1; i < integer; i++){
-          var num = integer / i;          
-          if(num != 1 && num != integer && Number.isInteger(num) == true){
-            array.push(num); 
-          }
-      } 
-      if(array.length == 0){
-        console.log(integer + " is prime");
-        return integer + " is prime";
-      }
-      else{
-        console.log(array.sort(compareNumeric));
-        return array.sort(compareNumeric); 
-      }
-    };
+      var final = result.join(' ');
+      console.log(final);
+     return final;
+    }
 
-    divisors(12);
+    spinWords("Hey fellow warriors");
 
     </script>
 

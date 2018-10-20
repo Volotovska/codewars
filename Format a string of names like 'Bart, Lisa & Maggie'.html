@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+        function list(names){
+            if(names.length > 1){
+                var str = '';
+                for(var i = 0; i <names.length-2; i++){
+                    str+=names[i].name + ", ";
+                }
+                var lastNum = names.length-1;
+                var final = str + names[lastNum-1].name + " & " + names[lastNum].name;
+                console.log(final);
+                return final;
+            }
+            else if(names.length == 1){
+                console.log(names[0].name);
+                return names[0].name;
+            }
+            else{
+                console.log('');
+                return '';
+            }
+        }
+
+        list([]);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

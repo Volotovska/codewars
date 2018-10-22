@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+    function toCamelCase(str){
+
+      var arr;
+
+      var newArray = [];
+
+      if(str.indexOf('_') != -1){
+
+        arr = str.split('_');
+
+        newArray.push(arr[0]);
+
+        for(var i = 1; i < arr.length; i++){
+
+          var str = arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase();
+          console.log(str);
+
+          newArray.push(str);
+        }
+
+        var res = newArray.join('');
+        console.log(res);
+        return res;
+
+      }
+
+      else if(str.indexOf('-') != -1) {
+        arr = str.split('-');
+
+        newArray.push(arr[0]);
+
+        for(var i = 1; i < arr.length; i++){
+
+          var str = arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase();
+          console.log(str);
+
+          newArray.push(str);
+        }
+
+        var res = newArray.join('');
+        console.log(res);
+        return res;
+      }
+
+     else{
+      console.log('');
+      return '';
+     }
+
+    }
+
+    toCamelCase("the-stealth-warrior");
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

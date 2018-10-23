@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+     function validParentheses(parens){
+      var l = parens.length;
+      console.log(l);
+      console.log(parens);
+      var array1 = [];
+      var array2 = [];
+      var counter = 0;
+        for(var i = 0; i <parens.length; i++) {
+          if(parens[i] === "(") {
+            array1.push(parens[i])
+          }
+          else if(parens[0] == ')' || parens[l-1] == '('){
+            counter = 1;
+            console.log(counter);
+          }
+          else{
+            array2.push(parens[i])
+          }
+        }
+        console.log(array1);
+        console.log(array2);
+
+        if(array1.length == array2.length && counter == 0){
+          console.log(true);
+          return true;
+        }
+        else {
+          console.log(false);
+          return false;
+        }
+      }
+
+    validParentheses( "())(" )
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

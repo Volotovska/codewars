@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+    function validBraces(parens = ''){
+      let str = parens;
+      let length = parens.length;
+
+      while (true) {
+        str = str.replace('{}', '');
+        str = str.replace('()', '');
+        str = str.replace('[]', '');
+
+        if (str.length === 0) {
+          return true;
+        }
+
+        if (str.length === length) {
+          return false;
+        }
+
+        length = str.length;
+      }
+    }
+
+    validBraces( "())(" )
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

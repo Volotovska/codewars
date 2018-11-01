@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+    function meeting(s = '') {
+  const ppl = s.split(';');
+  
+  const array = [];
+  
+  ppl.forEach((item) => {
+    const name = item.split(':');
+    
+    array.push({
+      firstName: name[0].toLocaleUpperCase(),
+      lastName: name[1].toLocaleUpperCase(),
+    });
+  });
+
+  console.log(array);
+  
+  array.sort(function(a, b){
+    const aName = `${a.lastName} ${a.firstName}`;
+    
+    const bName = `${b.lastName} ${b.firstName}`;
+    
+    if(aName < bName) { return -1; }
+    
+    if(aName > bName) { return 1; }
+    
+    return 0;
+  });
+  
+  let result = '';
+  
+  array.forEach((item) => {
+    result += `(${item.lastName}, ${item.firstName})`;
+  });
+  
+  return result;
+}
+
+    meeting("Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill");
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>
